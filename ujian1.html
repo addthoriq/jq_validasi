@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ujian Jquery 1</title>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/multiple-select/1.2.2/multiple-select.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="ujian1.js"></script>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <label for="firstName">Nama Depan</label>
+      <input type="text" name="firstName" id="firstName" required><span class="firstName"></span><br><br>
+      <label for="lastName">Nama Belakang</label>
+      <input type="text" name="lastName" id="lastName" required><span class="lastName"></span><br><br>
+      <label for="fullName">Nama Lengkap</label>
+      <input type="text" name="fullName" id="fullName"><br><br>
+      <label for="userName">Username</label>
+      <input type="text" name="userName" id="userName"><br><br>
+      <br>
+
+      <p>Jenis kelamin, Harap pilih salah satu</p>
+      <input type="radio" name="jkl" value="1" id="lk">
+      <label for="lk">Laki-Laki</label><br><br>
+      <input type="radio" name="jkl" value="0" id="pr">
+      <label for="pr">Perempuan</label><br><br>
+      <br>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required><span class="textEmail"></span><br><br>
+      <label for="pass">Password</label>
+      <input type="password" id="pass" required><span class="textPassword"></span><br><br>
+      <label for="konfirPass">Konfirmasi Password</label>
+      <input type="password" name="pass" id="konfirPass" required><span class="textKonfirPass"></span><br><br>
+      <label for="url">Alamat Website</label>
+      <input type="text" name="url" id="url" required><span class="textUrl"></span><br><br>
+      <br>
+
+      <p>Minat (minimal 2 pilihan)</p>
+      <select multiple="multiple" data-toggle="select">
+        <option value="manager">Manager</option>
+        <option value="staff">Staff</option>
+        <option value="supervisor">Supervisor</option>
+        <option value="direktur">Direktur</option>
+      </select>
+      <p>Pilih miniaml 2 minat</p><br><br>
+
+      <label for="pesan">Pesan</label>
+      <textarea name="pesan" rows="8" cols="80" style="border: 1px solid"></textarea><br><br>
+      <br>
+
+      <p>Setuju?</p><input type="checkbox" name="agree" id="agree" required><label for="agree"> Harap setuju dengan Form ini</label><br><br>
+      <input type="submit" value="Kirim">
+    </form>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/multiple-select/1.2.2/multiple-select.min.js"></script>
+    <script type="text/javascript">
+      $('#select').multipleSelect();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ujian 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="ujian2.js"></script>
+  </head>
+  <body>
+    <label for="nama">Nama</label><br>
+    <input type="text" name="nama" id="nama" required><span class="textNama"></span><br><br>
+    <label for="email">Email</label><br>
+    <input type="email" name="email" id="email" required><span class="textEmail"></span><br><br>
+    <p>Pesan</p>
+    <textarea name="editor1" id="editor1">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
+
+    <p>Pesan 2</p>
+    <textarea name="editor2" id="editor2">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
+
+    <br><input type="submit"><br><br><br><br>
+    <div id="editor3" contenteditable="true">Initial editor content.</div>
+
+    <script type="text/javascript">
+     CKEDITOR.replace( 'editor1' );
+     CKEDITOR.replace( 'editor2', {
+       uiColor   : '#CCEAEE',
+     });
+     CKEDITOR.disableAutoInline = true;
+     CKEDITOR.inline( 'editor3');
+    </script>
+  </body>
+</html>
